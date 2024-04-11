@@ -26,7 +26,7 @@ body{
     flex-direction: column;
     align-content: center;
     font-family: var(--inter), var(--lexend);
-
+    font-size: 15px;
 }
 
 
@@ -35,7 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 60vw;
+    width: 70vw;
     height: 100vh;
     margin-left: 20vw;
     margin-top: 3rem;
@@ -45,22 +45,116 @@ body{
 .img{
     background-image: url(/images/image-header-mobile.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position: 80%;
+    background-position: top;
+    background-size: cover;
+    filter: var(--soft_violet_accent);
     border-radius: .5rem .5rem 0 0;
-    width: 50%;
-    height: 50%;
-    margin-bottom: ;
+    width: 100%;
+    height: 40%;
+    display: flex;    
+}
+
+.img:before {
+    content: "";
+    background: var(--soft_violet_accent);
+    width: 100%;
+    opacity: 0.3;
 }
 
 .title{
     font-family: var(--inter);
     color: var(--white);
     text-align: center;
-    font-size: 1rem;
-    
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.title > p{
+span{
     color: var(--soft_violet_accent);
+}
+
+.detail {
+    color: var(--slightly_transparent_white);
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--lexend);
+    font-weight: 300;
+    font-size: 11px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stats {
+    text-align: center;
+    color: var(--slightly_transparent_white_stat);
+}
+
+.stats:nth-child(odd) {
+    color: white;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.stats:nth-child(2n){
+    text-transform: uppercase;
+    font-size: .5rem;
+}
+
+@media(min-width: 1440px){
+    body{
+        width: 100vw;
+        height: 60vh;
+    }
+    .container{
+        width: 60vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        border-radius: 0 .5rem .5rem 0;
+        position: relative;
+        top: 30%;
+   
+    }
+
+    .img{
+        background-image: url(/images/image-header-desktop.jpg);
+        width: 50%;
+        height: 100%;
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .title {
+        text-align: left;
+        font-size: 2rem;
+        margin-top: -2rem;
+    }
+    
+    .detail {
+        text-align: left;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .all-stats{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .stats.stats:nth-child(2n){
+        margin-top: 2rem;
+        margin-left: -9.5rem;
+    }
 }
